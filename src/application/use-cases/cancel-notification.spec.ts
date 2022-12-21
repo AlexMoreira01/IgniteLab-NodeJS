@@ -3,6 +3,7 @@ import { Content } from '@application/entities/content';
 import { Notification } from '@application/entities/notification';
 import { InMemoryNotificationsRepository } from '@test/repositories/in-memory-notifications-repository';
 import { CancelNotification } from './cancel-notification';
+import { makeNotification } from '@test/factories/notification-factory';
 
 describe('Cancel notification', () => {
   it('should be able to cancel a notification', async () => {
@@ -10,11 +11,7 @@ describe('Cancel notification', () => {
     // Inversão de dependencia quem chama o caso de uso que dis para ele o repositorio e nao ele mesmo
     const cancelNotification = new CancelNotification(notificationsRepository);
 
-    const notification = new Notification({
-      category: 'social',
-      content: new Content('Nova solicitação de amizade!'),
-      recipientId: 'example-recipient-id',
-    });
+    const notification = makeNotification(); // Utilizando o factory
 
     await notificationsRepository.create(notification);
 
