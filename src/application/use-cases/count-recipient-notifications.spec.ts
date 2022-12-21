@@ -1,6 +1,3 @@
-import { NotificationNotFound } from './errors/notification-not-found';
-import { Content } from '@application/entities/content';
-import { Notification } from '@application/entities/notification';
 import { InMemoryNotificationsRepository } from '@test/repositories/in-memory-notifications-repository';
 import { CountRecipientNotifications } from './count-recipient-notifications';
 import { makeNotification } from '@test/factories/notification-factory';

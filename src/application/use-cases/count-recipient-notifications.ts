@@ -5,9 +5,9 @@ interface CountRecipientNotificationsRequest {
   recipientId: string;
 }
 
-type CountRecipientNotificationsResponse = {
+interface CountRecipientNotificationsResponse {
   count: number;
-};
+}
 
 @Injectable()
 export class CountRecipientNotifications {
