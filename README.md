@@ -1,12 +1,12 @@
 # Notifications-Service
 
-> Projeto realizado durante o evento IgniteLab-NodeJs da Rocketseat
+> Project carried out during Rocketseat's IgniteLab-NodeJs event
  
- ## Projeto foi desenvolvido com NodeJs, TypeScript, Nest e SQLite, e fornece uma Api Rest para o envio e o gerenciamento de notificações.
+ ## Project was developed with NodeJs, TypeScript, Nest and SQLite, and provides a Rest Api for sending and managing notifications.
  
- > Status do Projeto: Concluido :heavy_check_mark:
+ > Status: Completed :heavy_check_mark:
  
- ## Principais libs utilizadas
+## 🛠 Techs
 
 - [NodeJs](https://nodejs.org/en/)
 - [NestJs](https://nestjs.com/)
@@ -15,64 +15,61 @@
 - [Jest](https://jestjs.io/pt-BR/)
 - [SQLite](https://www.sqlite.org/index.html)
 
- ## Back-End - NodeJs com NestJs
+ ## Back-End - NodeJs with NestJs
  
-#### Foi utilizado o framework NestJs para a criação da Api, aplicando conceitos do Solid, e Jest para a criação dos testes unitários.
+#### NestJs framework was used to create the Api, applying Solid and Jest concepts for the creation of unit tests.
 
-Com o desenvolvimento da api seguindo os padrões do nest e utilizando conceitos do Solid como inversão de dependência e injeção de dependência, utilizando o PrismaOrm para se conectar ao banco de dados em memória e realizar operações.
+With the development of the api following nest standards and using Solid concepts such as dependency inversion and dependency injection, using PrismaOrm to connect to the in-memory database and perform operations.
 
-## Rotas da aplicação
+## Routes 
 
-- > http://localhost:3000/notifications : Post - Criação de uma nova notificação, recipientId no formato uuid, exemplo:
+- > http://localhost:3000/notifications : Post - Creating a new notification, recipientId in uuid format, example:
 ```sh
 {
 "recipientId": "944ae520-85f4-4bef-94cb-6940097f4706",
-"content": "Nova notificação para o readme",
+"content": "New notification for readme",
 "category": "readme"
 }
 ```
 
-- > http://localhost:3000/notifications/from/:recipientId : Get - Listagem de todas as notificações de um usuário.
+- > http://localhost:3000/notifications/from/:recipientId : Get - Listing of all notifications for a user.
 
-- > http://localhost:3000/notifications/count/from/:recipientId : Get - Contagem de todas as notificações de um usuário.
+- > http://localhost:3000/notifications/count/from/:recipientId : Get - Count of all notifications of a user.
 
-- > http://localhost:3000/notifications/:id/unread : Patch - Faz a leitura de uma notificação através do id
+- > http://localhost:3000/notifications/:id/unread : Patch - Reads a notification using id.
 
-- > http://localhost:3000/notifications/:id/unread : Patch - Retira a leitura de uma notificação através do id
+- > http://localhost:3000/notifications/:id/unread : Patch - Removes the reading of a notification by id.
 
-- > http://localhost:3000/notifications/:id/unread : Patch - Cancela uma notificação através do id
+- > http://localhost:3000/notifications/:id/unread : Patch - Cancels a notification by id.
 
-## Iniciando aplicação e principais scripts
+## Getting Started
 
-- Instalar dependências 
+- Install dependencies: 
 ```sh
-> npm install
+> npm install or yarn 
 ```
 
-- Gerar o build da aplicação
+- Build the project
 ```sh
-> npm run build
+> npm run build or yarn build
 ```
 
-- Inicia a aplicação
+- Running the project
 ```sh
-> npm run start
+> npm run start or yarn start
 ```
 
-- Inicia a aplicação em ambiente de desenvolvimento
+- Start the application in development environment
 ```sh
-> npm run start:dev
+> npm run start:dev or yarn start:dev
 ```
 
-- Inicia a aplicação em ambiente de produção
+- Start the aplication in production environment
 ```sh
-> npm run start:prod
+> npm run start:prod or yarn start:prod
 ```
 
-- Executa os testes da aplicação
+- Running testd
 ```sh
-> npm run test
+> npm run test or yarn test
 ```
-
-<!--
--->
